@@ -1,7 +1,6 @@
 public class Crewmate implements Passenger {
 
     String name;
-
     @Override
     public void login(String name) {
         this.name = name;
