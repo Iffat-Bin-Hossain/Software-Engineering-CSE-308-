@@ -1,14 +1,18 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+import java.io.File;
 public class Main {
-    static Component root;
+    static Root root;
 
-    public static void main(String[] args) {
-        root = new Drive("Root");
+    public static void main(String[] args) throws FileNotFoundException {
+        int count=0;
+        root = new Root();
+        File Obj = new File("input.txt");
         HierarchicalFileSystem hfs = new HierarchicalFileSystem(root);
-        Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(Obj);
         while (true) {
             String command = scn.nextLine();
+            System.out.println("\n............................................ "+ (++count)+": "+command+" ............................................\n");
             String[] tokens = command.split(" ");
             if (tokens[0].equalsIgnoreCase("mkdrive")) {
                 String driveName = tokens[1];
@@ -26,7 +30,7 @@ public class Main {
                 String destination = tokens[1];
                 hfs.changeDirectory(destination);
             } else if (tokens[0].equalsIgnoreCase("ls")) {
-                hfs.details();
+                hfs.details(tokens[1]);
             }  else if (tokens[0].equalsIgnoreCase("delete") && tokens[1].equalsIgnoreCase("-r")) {
                 String toBeDeleted = tokens[2];
                 hfs.recursiveDelete(toBeDeleted);
@@ -36,6 +40,7 @@ public class Main {
             } else if (tokens[0].equalsIgnoreCase("list")) {
                 hfs.listing();
             } else {
+                System.out.println("Program finished");
                 break;
             }
 

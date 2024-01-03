@@ -3,22 +3,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Drive implements Component {
+public class Root implements Component {
     String name;
-    Date creationTime;
     List<Component> componentList;
+    Date creationTime;
     String directory;
 
-    Drive(String name) {
-        this.name = name;
-        this.componentList = new ArrayList<>();
+    Root() {
+        name = "Root";
+        componentList = new ArrayList<>();
         creationTime = new Date();
+        directory = "";
     }
 
-    @Override
-    public List<Component> getComponentList() {
-        return componentList;
-    }
 
     @Override
     public String getName() {
@@ -27,21 +24,21 @@ public class Drive implements Component {
 
     @Override
     public int getSize() {
-        int driveSize = 0;
+        int rootSize = 0;
         for (Component c : componentList) {
-            driveSize += c.getSize();
+            rootSize += c.getSize();
         }
-        return driveSize;
+        return rootSize;
     }
 
     @Override
     public String getType() {
-        return "Drive";
+        return "Root";
     }
 
     @Override
     public void setDirectory(String parentDirectory) {
-        this.directory = parentDirectory + name + ":\\";
+        directory = "";
     }
 
     @Override
@@ -60,22 +57,21 @@ public class Drive implements Component {
     }
 
     @Override
+    public List<Component> getComponentList() {
+        return componentList;
+    }
+
+    @Override
     public void showDetails() {
         System.out.println("Name: " + name);
-        System.out.println("Type: " + getType());
-        System.out.println("Size: " + getSize());
-        System.out.println("Directory :\"" + getDirectory() + "\"");
+        System.out.println("Size: " + getSize() + " kB");
         System.out.println("Component Count: " + getComponentCount());
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM,yyyy hh:mm a");
         System.out.println("Creation time: " + dateFormat.format(creationTime));
-
     }
 
     @Override
     public void delete() {
-        for (Component c : componentList) {
-            c.delete();
-        }
-        System.out.println("Deleting drive: " + name + "......");
+
     }
 }

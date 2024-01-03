@@ -1,0 +1,60 @@
+ls Root
+ls Vedio
+mkdir PC
+touch base.txt 500
+mkdrive C
+mkdrive C
+mkDrive D
+mkDrive E
+cd C:\
+mkdrive subC
+list
+mkdir Music
+touch sheet.xls 400
+touch specification.pdf 600
+mkdir Vedio
+cd Music
+list
+touch titanic.mp3 5
+ls Music
+touch Afreen.mp3 2
+ls Vedio
+touch intoYourArms.mp3 90
+list
+mkdir song
+cd song
+touch Moye_Moye.mp3 60
+list
+cd ~
+list
+cd D:\
+mkdir L-3T-1
+cd L-3T-1
+mkdir Compiler
+ls Vedio
+ls Moye_Moye.mp3
+cd Compiler
+touch symbolTable 5000
+touch Lexer 7000
+touch parser 13000
+touch codeGeneration 40000
+cd ~
+list
+cd E:\
+touch input.txt 670
+touch Ottoman_Empire.pdf 5000
+ls titanic.mp3
+touch Shahnama.pdf 4000
+touch kakababu.pdf 77000
+touch Mahabharath.pdf 600
+mkdir raymond
+list
+cd raymond
+touch Sundarban.mp4 56
+touch 12thFail.mp4 30000
+touch Consuring2.mp4 60000
+cd ~
+ls song
+ls parser
+list
+exit
