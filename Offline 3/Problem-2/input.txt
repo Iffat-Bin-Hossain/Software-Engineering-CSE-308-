@@ -1,5 +1,4 @@
 ls Root
-ls Vedio
 mkdir PC
 touch base.txt 500
 mkdrive C
@@ -11,20 +10,27 @@ mkdrive subC
 list
 mkdir Music
 touch sheet.xls 400
-touch specification.pdf 600
+touch spec.pdf 600
 mkdir Vedio
 cd Music
 list
 touch titanic.mp3 5
 ls Music
-touch Afreen.mp3 2
+touch kesariya.mp3 4
 ls Vedio
-touch intoYourArms.mp3 90
+touch intoYourArms.mp3 9
 list
 mkdir song
 cd song
-touch Moye_Moye.mp3 60
+touch Moye_Moye.mp3 6
+touch seeYouAgain.mp3 8
 list
+cd ~
+cd C:\
+cd Vedio
+mkdir zippedVedio
+cd zippedVedio
+touch Spider-Man:_No_Way_Home.zip 30
 cd ~
 list
 cd D:\
@@ -34,27 +40,41 @@ mkdir Compiler
 ls Vedio
 ls Moye_Moye.mp3
 cd Compiler
-touch symbolTable 5000
-touch Lexer 7000
-touch parser 13000
-touch codeGeneration 40000
+touch symbolTable.cpp 500
+touch Lexer.l 700
+touch parser.y 1300
+touch codeGeneration.asm 4000
 cd ~
 list
 cd E:\
-touch input.txt 670
-touch Ottoman_Empire.pdf 5000
+touch input.txt 6
+touch Ottoman_Empire.pdf 50
 ls titanic.mp3
-touch Shahnama.pdf 4000
-touch kakababu.pdf 77000
-touch Mahabharath.pdf 600
-mkdir raymond
+touch Lecture.doc 400
+touch kakababu.pdf 770
+touch DesheBideshe.pdf 600
+mkdir Movies
 list
-cd raymond
-touch Sundarban.mp4 56
-touch 12thFail.mp4 30000
-touch Consuring2.mp4 60000
+cd Movies
+touch Ontorjal.mp4 560
+ls Spider-Man:_No_Way_Home.zip
+touch 12thFail.mp4 300
+touch Annabella.mp4 600
+cd ~
+cd E:\
+list
 cd ~
 ls song
-ls parser
+ls parser.y
+list
+delete C
+ls Vedio
+cd C:\
+cd Music
+delete titanic.mp3
+delete -r kesariya.mp3
+cd ~
+list
+delete -r E
 list
 exit

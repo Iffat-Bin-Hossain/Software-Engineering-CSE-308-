@@ -61,7 +61,6 @@ public class File implements Component{
         System.out.println("Type: "+getType());
         System.out.println("Size: " + size + " kB");
         System.out.println("Directory :\"" + getDirectory() + "\"");
-        System.out.println("Component Count: "+getComponentCount());
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM,yyyy hh:mm a");
         System.out.println("Creation time: " + dateFormat.format(creationTime));
     }
