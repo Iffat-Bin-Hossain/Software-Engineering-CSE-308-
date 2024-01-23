@@ -46,7 +46,7 @@ public class main {
 
     static Shake MyShake(int shakeNo, ShakeBuilder sBuilder) {
         Shake myShake=new Shake();
-        ShakeDirtector sDirector = new ShakeDirtector(sBuilder);
+        ShakeDirector sDirector = new ShakeDirector(sBuilder);
         if (shakeNo == 1) {
             myShake = sDirector.ChocolateShake();
         } else if (shakeNo == 2) {
